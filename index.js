@@ -68,9 +68,9 @@ client.on('messageCreate', (msg) => {
 
     const toxic = [
       'spam gì lắm thế 😏',
-      'bình tĩnh đi bro 🤡',
+      'bình tĩnh nào bro 🤡',
       'gõ chậm lại coi 😑',
-      'chat như máy vậy 😭'
+      'chat như 36 vậy 😭'
     ];
 
     msg.reply(toxic[Math.floor(Math.random()*toxic.length)]);
