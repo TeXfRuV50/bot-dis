@@ -66,7 +66,7 @@ client.on('messageCreate', (msg) => {
 
     toxicCooldown.set(userId, now);
 
-    const toxic = [
+     const toxic = [
       'spam gì lắm thế 😏',
       'bình tĩnh nào bro 🤡',
       'gõ chậm lại coi 😑',
