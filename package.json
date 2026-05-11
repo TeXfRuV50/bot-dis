@@ -1,3 +1,12 @@
-"scripts": {
-  "start": "node index.js"
+{
+  "name": "bot-dis",
+  "version": "1.0.0",
+  "description": "discord bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.0.0"
+  }
 }
