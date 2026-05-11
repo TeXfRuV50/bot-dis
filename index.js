@@ -8,6 +8,7 @@ const client = new Client({
   ]
 });
 
+// 🔥 anti spam
 const userSpam = new Map();
 const toxicCooldown = new Map();
 
@@ -57,7 +58,7 @@ client.on('messageCreate', (msg) => {
   const times = userSpam.get(userId);
   times.push(now);
 
-  const filtered = times.filter(t => now - t <= 1500);
+  const filtered = times.filter(t => now - t <= 3000);
   userSpam.set(userId, filtered);
 
   if (filtered.length > 2) {
@@ -67,13 +68,14 @@ client.on('messageCreate', (msg) => {
 
     const toxic = [
       'spam gì lắm thế 😏',
-      'bình tĩnh nào bro 🤡',
+      'bình tĩnh đi bro 🤡',
       'gõ chậm lại coi 😑',
-      'chat như 36 vậy 😭'
+      'chat như máy vậy 😭'
     ];
 
     msg.reply(toxic[Math.floor(Math.random()*toxic.length)]);
   }
 });
 
-client.login('MTUwMjkwODQ2OTk3MDM0MTkwOA.GRnISp.X9yRFhrws2bzF3fowV4rEFFFmpJEPNpoWtYB90');
+// 🔥 LOGIN bằng ENV (Render)
+client.login(process.env.TOKEN);
